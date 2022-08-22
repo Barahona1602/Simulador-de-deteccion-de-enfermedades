@@ -20,10 +20,10 @@ if numero=="1":
     paciente = datos.getElementsByTagName('paciente')
 
     for i in paciente:
-        nombre = datos.getElementsByTagName('nombre')
-        edad = datos.getElementsByTagName('edad')
-        periodos = datos.getElementsByTagName('periodos')
-        m = datos.getElementsByTagName('m')
+        nombre = i.getElementsByTagName('nombre')
+        edad = i.getElementsByTagName('edad')
+        periodos = i.getElementsByTagName('periodos')
+        m = i.getElementsByTagName('m')
         listasimple.siginsert(nombre[0].firstChild.data, edad[0].firstChild.data, periodos[0].firstChild.data, m[0].firstChild.data)
 
     listasimple.mostrarlista()
