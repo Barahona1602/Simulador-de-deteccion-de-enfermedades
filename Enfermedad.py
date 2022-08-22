@@ -2,7 +2,9 @@ from tkinter import filedialog
 from xml.dom import minidom
 from tkinter import filedialog as fd
 import xml.etree.ElementTree as ET
+from listasimple import listasi
 
+listasimple=listasi()
 print("Bienvenido al programa de enfermedades")
 print("Me llamo Pablo Barahona y soy quien realizó el programa")
 print("Mi curso es Introducción a la Programación 2 sección D")
@@ -22,10 +24,13 @@ if numero=="1":
         edad = datos.getElementsByTagName('edad')
         periodos = datos.getElementsByTagName('periodos')
         m = datos.getElementsByTagName('m')
+        listasimple.siginsert(nombre[0].firstChild.data, edad[0].firstChild.data, periodos[0].firstChild.data, m[0].firstChild.data)
+
+    listasimple.mostrarlista()
 
 #Opción de salir
 elif numero=="2":
     print("¡Regresa pronto! :)")
     quit()
 
-#Cambios deben de aparecer
+
