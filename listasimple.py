@@ -6,9 +6,9 @@ class listasi():
         self.size = 0
     
     
-    def siginsert(self, nombre, edad, periodos, m):
+    def siginsert(self, nombre, edad, periodos, m, rejilla, celda):
 
-        paciente2= Datospaciente(nombre, edad, periodos, m)
+        paciente2= Datospaciente(nombre, edad, periodos, m, rejilla, celda)
         self.size += 1
         if self.primero is None:
             self.primero = paciente2
@@ -23,6 +23,6 @@ class listasi():
         tmp = self.primero
         print(self.size)
         while tmp is not None:
-            print("Nombre: ", tmp.nombre, "   ", "Edad: ", tmp.edad, "  ", "Períodos:  ", tmp.periodos, " ", "Matriz:  ", tmp.m)
+            print("Nombre: ", tmp.nombre, "   ", "Edad: ", tmp.edad, "  ", "Períodos:  ", tmp.periodos, " ", "Matriz:  ", tmp.m, "Rejilla: ",  tmp.rejilla, "Celda: ", tmp.celda)
             tmp=tmp.getsiguiente()
     
