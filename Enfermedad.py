@@ -24,6 +24,10 @@ if numero=="1":
         edad = i.getElementsByTagName('edad')
         periodos = i.getElementsByTagName('periodos')
         m = i.getElementsByTagName('m')
+        rejilla = i.getElementsByTagName('rejilla')
+        for k in rejilla:
+            celda= k.getElementsByTagName('celda')
+
         listasimple.siginsert(nombre[0].firstChild.data, edad[0].firstChild.data, periodos[0].firstChild.data, m[0].firstChild.data)
 
     listasimple.mostrarlista()
