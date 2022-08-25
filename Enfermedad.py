@@ -2,7 +2,8 @@ from tkinter import filedialog
 from xml.dom import minidom
 from tkinter import filedialog as fd
 import xml.etree.ElementTree as ET
-from listasimple import listasi
+from lista import listasi
+import numpy as np
 
 listasimple=listasi()
 print("Bienvenido al programa de enfermedades")
@@ -25,10 +26,25 @@ if numero=="1":
         periodos = i.getElementsByTagName('periodos')
         m = i.getElementsByTagName('m')
         rejilla = i.getElementsByTagName('rejilla')
-        for k in rejilla:
-            celda= k.getElementsByTagName('celda')
+        celda= i.getElementsByTagName('celda')
 
-        listasimple.siginsert(nombre[0].firstChild.data, edad[0].firstChild.data, periodos[0].firstChild.data, m[0].firstChild.data)
+        num= int(m[0].firstChild.data)
+        matriz = np.zeros((num,num))
+        for j in rejilla:
+            num=0
+            for k in celda:
+                matriz[(int(celda[num].attributes['f'].value)-1)][(int(celda[num].attributes['c'].value)-1)]=1
+                num+=1
+            orden=np.zeros((num,2))
+            p=0
+            for l in celda:
+                orden[p][0]=(int(celda[p].attributes['f'].value))
+                orden[p][1]=(int(celda[p].attributes['c'].value))
+                p+=1
+        
+        
+        
+        listasimple.siginsert(nombre[0].firstChild.data, edad[0].firstChild.data, periodos[0].firstChild.data, m[0].firstChild.data, orden, matriz)
 
     listasimple.mostrarlista()
 

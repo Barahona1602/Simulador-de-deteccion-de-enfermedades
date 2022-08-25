@@ -21,8 +21,7 @@ class listasi():
         
     def mostrarlista(self):
         tmp = self.primero
-        print(self.size)
         while tmp is not None:
-            print("Nombre: ", tmp.nombre, "   ", "Edad: ", tmp.edad, "  ", "Períodos:  ", tmp.periodos, " ", "Matriz:  ", tmp.m, "Rejilla: ",  tmp.rejilla, "Celda: ", tmp.celda)
+            print("Nombre: ", tmp.nombre, "   ", "Edad: ", tmp.edad, "  ", "Períodos:  ", tmp.periodos, " ", "Matriz:  ", tmp.m,"\n", tmp.celda)
             tmp=tmp.getsiguiente()
     
