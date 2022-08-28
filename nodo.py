@@ -1,5 +1,6 @@
 class Datospaciente():
-    def __init__(self, nombre, edad, periodos, m, rejilla, celda):
+    def __init__(self, numpaciente, nombre, edad, periodos, m, rejilla, celda):
+        self.numpaciente=numpaciente
         self.nombre=nombre
         self.edad=edad
         self.periodos=periodos
