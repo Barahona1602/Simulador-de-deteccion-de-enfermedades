@@ -47,7 +47,7 @@ if numero=="1":
         for j in rejilla:
             num=0
             for k in celda:
-                matriz[(int(celda[num].attributes['f'].value))][(int(celda[num].attributes['c'].value))]=4
+                matriz[(int(celda[num].attributes['f'].value))][(int(celda[num].attributes['c'].value))]=1
                 num+=1
             orden=np.zeros((num,2))
             p=0

@@ -62,6 +62,7 @@ class listasi():
         matrizenmatriz=np.array(matrizenferma)
         coordenadasenfermas1=[]
         coordenadasenfermas2=[]
+        sumadematrices=[]
         periodossuma=1
 
 
@@ -74,21 +75,21 @@ class listasi():
                 for j in i:
                     if numerito2<=tamañomatriz-2 and numerito<=tamañomatriz-2 and matrizenmatriz[numerito][numerito2]==0:
                         celulaenferma=0
-                        if matrizenmatriz[numerito-1][numerito2-1]==4:
+                        if matrizenmatriz[numerito-1][numerito2-1]==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito][numerito2-1]==4:
+                        if matrizenmatriz[numerito][numerito2-1]==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito+1][numerito2-1]==4:
+                        if matrizenmatriz[numerito+1][numerito2-1]==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito-1][numerito2]==4:
+                        if matrizenmatriz[numerito-1][numerito2]==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito+1][numerito2]==4:
+                        if matrizenmatriz[numerito+1][numerito2]==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito-1][numerito2+1]==4:
+                        if matrizenmatriz[numerito-1][numerito2+1]==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito][numerito2+1] ==4:
+                        if matrizenmatriz[numerito][numerito2+1] ==1:
                             celulaenferma+=1
-                        if matrizenmatriz[numerito+1][numerito2+1]==4:
+                        if matrizenmatriz[numerito+1][numerito2+1]==1:
                             celulaenferma+=1
                         if celulaenferma==3:
                             coordenadasenfermas1.append((numerito))
@@ -110,23 +111,23 @@ class listasi():
                 
                 iteradorenfermo2=1
                 for j in i:
-                    if iteradorenfermo2<=tamañomatriz-2 and iteradorenfermo<=tamañomatriz-2 and matrizenmatriz[iteradorenfermo][iteradorenfermo2]==4:
+                    if iteradorenfermo2<=tamañomatriz-2 and iteradorenfermo<=tamañomatriz-2 and matrizenmatriz[iteradorenfermo][iteradorenfermo2]==1:
                         celulaenferma2=0
-                        if matrizenmatriz[iteradorenfermo-1][iteradorenfermo2-1]==4:
+                        if matrizenmatriz[iteradorenfermo-1][iteradorenfermo2-1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo][iteradorenfermo2-1]==4:
+                        if matrizenmatriz[iteradorenfermo][iteradorenfermo2-1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo+1][iteradorenfermo2-1]==4:
+                        if matrizenmatriz[iteradorenfermo+1][iteradorenfermo2-1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo-1][iteradorenfermo2]==4:
+                        if matrizenmatriz[iteradorenfermo-1][iteradorenfermo2]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo+1][iteradorenfermo2]==4:
+                        if matrizenmatriz[iteradorenfermo+1][iteradorenfermo2]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo-1][iteradorenfermo2+1]==4:
+                        if matrizenmatriz[iteradorenfermo-1][iteradorenfermo2+1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo][iteradorenfermo2+1]==4:
+                        if matrizenmatriz[iteradorenfermo][iteradorenfermo2+1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorenfermo+1][iteradorenfermo2+1]==4:
+                        if matrizenmatriz[iteradorenfermo+1][iteradorenfermo2+1]==1:
                             celulaenferma2+=1
                         if celulaenferma2==3 or celulaenferma2==2:
                             coordenadasenfermas11.append((iteradorenfermo))
@@ -148,23 +149,23 @@ class listasi():
                 
                 iteradorsano2=1
                 for j in i:
-                    if iteradorsano2<=tamañomatriz-2 and iteradorsano<=tamañomatriz-2 and matrizenmatriz[iteradorsano][iteradorsano2]==4:
+                    if iteradorsano2<=tamañomatriz-2 and iteradorsano<=tamañomatriz-2 and matrizenmatriz[iteradorsano][iteradorsano2]==1:
                         celulaenferma2=0
-                        if matrizenmatriz[iteradorsano-1][iteradorsano2-1]==4:
+                        if matrizenmatriz[iteradorsano-1][iteradorsano2-1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano][iteradorsano2-1]==4:
+                        if matrizenmatriz[iteradorsano][iteradorsano2-1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano+1][iteradorsano2-1]==4:
+                        if matrizenmatriz[iteradorsano+1][iteradorsano2-1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano-1][iteradorsano2]==4:
+                        if matrizenmatriz[iteradorsano-1][iteradorsano2]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano+1][iteradorsano2]==4:
+                        if matrizenmatriz[iteradorsano+1][iteradorsano2]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano-1][iteradorsano2+1]==4:
+                        if matrizenmatriz[iteradorsano-1][iteradorsano2+1]==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano][iteradorsano2+1] ==4:
+                        if matrizenmatriz[iteradorsano][iteradorsano2+1] ==1:
                             celulaenferma2+=1
-                        if matrizenmatriz[iteradorsano+1][iteradorsano2+1]==4:
+                        if matrizenmatriz[iteradorsano+1][iteradorsano2+1]==1:
                             celulaenferma2+=1
                         if celulaenferma2!=3 or celulaenferma2!=2:
                             coordenadasenfermas13.append((iteradorsano))
@@ -187,7 +188,7 @@ class listasi():
             #actualizador de células sanas a enfermas
             actualizador=0
             for l in range(len(coordenadasenfermas1)):
-                matrizenmatriz[(coordenadasenfermas1[actualizador])][(coordenadasenfermas2[actualizador])]=4
+                matrizenmatriz[(coordenadasenfermas1[actualizador])][(coordenadasenfermas2[actualizador])]=1
                 actualizador+=1
 
 
@@ -195,16 +196,18 @@ class listasi():
             #actualizador de células enfermas que siguen enfermas
             actualizador1=0
             for l in range(len(coordenadasenfermas11)):
-                matrizenmatriz[(coordenadasenfermas11[actualizador1])][(coordenadasenfermas21[actualizador1])]=4
+                matrizenmatriz[(coordenadasenfermas11[actualizador1])][(coordenadasenfermas21[actualizador1])]=1
                 actualizador1+=1
 
             print("Patrón No." + str(periodossuma))                
             print(matrizenmatriz)
             periodossuma+=1
-            seguir= input("¿Desea seguir analizando la muestra?: \n1. Si \n2. Salir del programa \n")
-            if seguir==2:
-                print("¡Regresa pronto! :)")
-                quit()
+            sumadematrices.append(matrizenmatriz)
+            if periodossuma <=12:
+                seguir= input("¿Desea seguir analizando la muestra?: \n1. Si \n2. Salir del programa \n")
+                if seguir==2:
+                    print("¡Regresa pronto! :)")
+                    quit()
 
 
 
