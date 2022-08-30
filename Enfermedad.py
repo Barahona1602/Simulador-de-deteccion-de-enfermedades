@@ -5,13 +5,14 @@ from tkinter import filedialog as fd
 import xml.etree.ElementTree as ET
 from lista import listasi
 import numpy as np
-
 from nodo import Datospaciente
+from listamatriz import listamatriz
 
+listam = listamatriz()
 listasimple=listasi()
 
 
-#Menú principal 
+#Menú principal
 print("Bienvenido al programa de enfermedades")
 print("Me llamo Pablo Barahona y soy quien realizó el programa")
 print("Mi curso es Introducción a la Programación 2 sección D")
@@ -28,7 +29,7 @@ if numero=="1":
     pacientes = datos.getElementsByTagName('pacientes')
     paciente = datos.getElementsByTagName('paciente')
     numpaciente=0
-    
+
     #Leer archivo XML con dom
     for i in paciente:
         numpaciente=numpaciente+1
@@ -46,7 +47,7 @@ if numero=="1":
         for j in rejilla:
             num=0
             for k in celda:
-                matriz[(int(celda[num].attributes['f'].value))][(int(celda[num].attributes['c'].value))]=1
+                matriz[(int(celda[num].attributes['f'].value))][(int(celda[num].attributes['c'].value))]=4
                 num+=1
             orden=np.zeros((num,2))
             p=0
@@ -58,6 +59,7 @@ if numero=="1":
         #Guardar datos en nodo
         listasimple.siginsert(numpaciente, nombre[0].firstChild.data, edad[0].firstChild.data, periodos[0].firstChild.data, m[0].firstChild.data, orden, matriz)
 
+
     #Método para mostrar los datos de la lista (nombre y numero de paciente)
     listasimple.mostrarpaciente()
     seleccionarp = input("Seleccione el paciente según su número: ")
@@ -66,10 +68,11 @@ if numero=="1":
     #Método para mostrar el paciente que seleccionó el usuario
     listasimple.pacienteseleccionado(sele)
 
-    leer= input("¿Desea leer analizar la muestra?: \n1. Si \n2. Salir del programa \n")
+
+    leer= input("¿Desea analizar la muestra?: \n1. Si \n2. Salir del programa \n")
 
     if leer=="1":
-        print("Analizando datos...")
+        listasimple.mostrarmatrizenferma()
     elif leer=="2":
         print("¡Regresa pronto! :)")
         quit()
