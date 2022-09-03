@@ -6,9 +6,8 @@ import xml.etree.ElementTree as ET
 from lista import listasi
 import numpy as np
 from nodo import Datospaciente
-from listamatriz import listamatriz
 
-listam = listamatriz()
+
 listasimple=listasi()
 
 
@@ -43,7 +42,7 @@ if numero=="1":
 
         #Leer la matriz con celdas contagiadas
         num= int(m[0].firstChild.data)
-        matriz = np.zeros((num,num))
+        matriz = np.zeros((num,num), dtype=int)
         for j in rejilla:
             num=0
             for k in celda:
@@ -74,6 +73,15 @@ if numero=="1":
     if leer=="1":
         listasimple.mostrarmatrizenferma()
     elif leer=="2":
+        print("¡Regresa pronto! :)")
+        quit()
+
+    analisis= input("¿Desea evaluar la enfermedad?: \n1. Si \n2. Salir del programa \n")
+
+    if analisis=="1":
+        listasimple.listaduplicada()
+        listasimple.generarxml()
+    elif analisis=="2":
         print("¡Regresa pronto! :)")
         quit()
 
